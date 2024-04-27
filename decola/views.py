@@ -8,3 +8,6 @@ def helloworld(request):
 
 def home(request):
     return render(request, 'home/pages/home.html')
+
+def not_found_404(request, exception):
+    return render(request, 'error/404.html', status=404)
