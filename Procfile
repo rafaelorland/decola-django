@@ -1,0 +1,1 @@
+web: gunicorn decola.wsgi --log-file -
