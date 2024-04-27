@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-woaut0ojb9rt$khe+ok)uz+*@f4(ee0^lt#g1zge)%ryutlzt@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["decola-web.com"]
+ALLOWED_HOSTS = ["decola-web.com", "www.decola-web.com", "decola-django-production.up.railway.app"]
 
-CSRF_TRUSTED_ORIGINS = ['https://decola-web.com']
+CSRF_TRUSTED_ORIGINS = ['https://decola-web.com', 'https://www.decola-web.com', "https://decola-django-production.up.railway.app"]
 
 
 # Application definition
