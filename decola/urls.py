@@ -21,12 +21,13 @@ from django.conf.urls.static import static
 from decola.views import helloworld, home
 from django.views.generic import TemplateView
 from django.contrib.sitemaps.views import sitemap
-from .sitemaps import PostSitemap
+from .sitemaps import PostSitemap, PageSitemap
 
 handler404 = 'blog.views.not_found_404'
 
 
 sitemaps = {
+    'pages': PageSitemap,
     'posts': PostSitemap,
 }
 
