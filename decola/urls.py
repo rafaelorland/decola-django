@@ -18,15 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from decola.views import helloworld, home
+from django.views.generic import TemplateView
 
-from decola.views import helloworld, home, not_found_404
+handler404 = 'blog.views.not_found_404'
 
 urlpatterns = [
     path('', home, name='home'),
     path('admin/', admin.site.urls),
-    path('helloworld', helloworld, name='helloworld'),
+    path('helloworld/', helloworld, name='helloworld'),
     path('blog/', include('blog.urls')),
-    
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -515,6 +515,48 @@ scroll-page {
   }
 }
 
+/*--------------------------------------------------------------
+# Page 404
+--------------------------------------------------------------*/
+#notfound {
+  width: 100%;
+  height: 100vh;
+  background: #222222;
+}
+
+#notfound h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 46px;
+  margin-bottom: 20px;
+  color: #00FF85;
+}
+
+#notfound h2 {
+  font-family: "Poppins", sans-serif;
+  color: #00E0FF;
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+
+#notfound a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 10px 0 0 0;
+  color: #222222;
+  background: #00FF85;
+}
+
+#notfound .btn-get-started:hover {
+  background: #00E0FF;
+}
 
 /*--------------------------------------------------------------
 # About Us

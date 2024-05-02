@@ -1,7 +1,16 @@
 {% extends 'home/components/base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="h-100 d-flex align-items-center justify-content-center">
-    <img src="{% static 'home/img/not_found.gif' %}" alt>
-</div>
+
+<section id="notfound" class="d-flex align-items-center notfound">
+    <div class="container">
+        <h1>Erro 404</h1>
+        <h2>A página que você está procurando não pôde ser
+            encontrada.</h2>
+        <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="/" class="btn-get-started">Voltar para a Página Inicial</a>
+        </div>
+    </div>
+</section>
 {% endblock content %}
