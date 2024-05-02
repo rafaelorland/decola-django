@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /admin/
 
+Sitemap: https://decola-web.com/sitemap.xml
+Sitemap: https://www.decola-web.com/sitemap.xml
