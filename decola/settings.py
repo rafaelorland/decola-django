@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-woaut0ojb9rt$khe+ok)uz+*@f4(ee0^lt#g1zge)%ryutlzt@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-ALLOWED_HOSTS = ["decola-web.com", "www.decola-web.com", "decola-django-production.up.railway.app"]
+ALLOWED_HOSTS = ["decola-web.com", "www.decola-web.com"]
 
-CSRF_TRUSTED_ORIGINS = ['https://decola-web.com', 'https://www.decola-web.com', "https://decola-django-production.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ['https://decola-web.com', 'https://www.decola-web.com']
 
 
 # Application definition
