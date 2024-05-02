@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from decola.views import helloworld, home
 from django.views.generic import TemplateView
-from django.contrib.sitemaps import views as sitemap_views
+from django.contrib.sitemaps.views import sitemap
 from .sitemaps import PostSitemap
 
 handler404 = 'blog.views.not_found_404'
@@ -37,7 +37,7 @@ urlpatterns = [
     path('helloworld/', helloworld, name='helloworld'),
     path('blog/', include('blog.urls')),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
-    path('sitemap.xml', sitemap_views.sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
