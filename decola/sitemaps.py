@@ -10,8 +10,7 @@ class CustomSitemap(Sitemap):
     priority = 1.0
 
     def items(self):
-        # Retorna uma lista de URLs que você deseja incluir no sitemap
-        return ['home', 'helloworld', 'blog_post']
+        return ['home', 'helloworld']
 
     def lastmod(self, obj):
         # Define manualmente a data de modificação para cada URL

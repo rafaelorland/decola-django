@@ -9,7 +9,7 @@ def blog(request, id=None):
         return blog_detail(request, id)
     else:
         context = {
-            "blogs": Post.objects.all()
+            "blogs": Post.objects.all().order_by('-created_at')
         }
         return render(request, 'blog_list.html', context)
 
