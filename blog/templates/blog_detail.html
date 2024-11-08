@@ -4,80 +4,159 @@
 <html lang="pt-br">
   <head>
     {% block base_head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog sobre tópicos interessantes">
     <title>{{ post.title }}</title>
 
-    <meta charset="utf-8" />
-    <link href="{% static 'home/img/icon.png' %}" rel="icon">
-    <link href="{% static 'home/img/icon.png' %}" rel="apple-touch-icon">
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- LINK FAVICON -->
+    <link rel="shortcut icon" href="{% static 'asserts/logo-one_decola.png' %}"
+      type="image/x-icon" />
 
+    <!-- IMPORT FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap"
-      rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
 
-    <link rel="stylesheet" href="{% static 'home/fonts/icomoon/style.css' %}">
+    <!-- IMPORT ICON -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-    <link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+    <!-- SASS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
-
-    <!-- Style -->
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     {% endblock %}
   </head>
 
   <body>
-    {% include 'home/components/navbar.html' %}
+    <header>
+      <img src="{% static 'asserts/logo-one_decola.png' %}"
+        alt="Logo Decola Startup" class="logo-menu" />
+
+      <div class="cart-menu">
+        <ul class="link-menu">
+          <li>
+            <a href="{% url 'home' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'home' %}#services">Serviços</a>
+          </li>
+          <li>
+            <a href="{% url 'blog' %}">Blog</a>
+          </li>
+          <li>
+            <a href="{% url 'home' %}#Contacts">Contatos</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="btn-menu">
+        <button><a href="{% url 'home' %}#Contacts">Contatos</a></button>
+      </div>
+
+      <!-- BOTÃO PARA MENU MOBILE -->
+      <div class="menu-mobile">
+        <button><i class="bi bi-list"></i></button>
+      </div>
+    </header>
 
     <div class="content-blog">
       <section class="breadcrumbs">
         <div class="container">
           <ol>
-            <li>
-              <a href="{% url 'home' %}">Home</a>
-            </li>
-            <li>
-              <a href="{% url 'blog' %}">Blog</a>
-            </li>
-
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><span>/</span></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><span>/</span></li>
             <li>{{ post.slug }}</li>
           </ol>
         </div>
       </section>
+
       <div class="container mt-6">
         <div class="blog-post">
           <!-- Post header -->
           <div class="mb-4 titulo-blog-detail">
-            <!-- Post title -->
             <h1 class="fw-bolder mb-1">{{ post.title }}</h1>
             <h4 class="fw-bolder mb-2">{{ post.summary }}</h4>
-            <!-- Post meta content -->
             <div class="text-muted fst-italic mb-2">
-              Postado em {{ post.created_at }} por {{ post.author }}
+              Postado em {{ post.created_at|date:"d M Y" }} por {{ post.author }}
             </div>
           </div>
+
           <!-- Preview image figure -->
           <div class="mb-4">
             <img class="img-fluid rounded"
               src="{% url 'home' %}media/{{ post.image }}"
-              alt="..." />
+              alt="{{ post.title }}" />
           </div>
+
           <!-- Post content -->
-          <div class="mb-5">
+          <div class="mb-5 content">
             {{ post.content|safe }}
           </div>
         </div>
       </div>
 
-      {% include 'home/components/footer.html' %}
+      <footer>
+        <div class="footer-culum1">
+          <img src="{% static 'asserts/logo-decola-three.png' %}"
+            alt="Logo Decola Startup" />
 
-      <script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
-      <script src="{% static 'home/js/popper.min.js' %}"></script>
-      <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
-      <script src="{% static 'home/js/jquery.sticky.js' %}"></script>
-      <script src="{% static 'home/js/main.js' %}"></script>
+          <div>
+            <a href="https://www.linkedin.com" target="_blank"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/decola_startup"
+              target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/5591982297971" target="_blank"><i
+                class="bi bi-whatsapp"></i></a>
+            <a href="https://github.com/decola-startup" target="_blank"><i
+                class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-culum2">
+          <div class="footer-card">
+            <span>Links rápidos</span>
+            <a href="{% url 'home' %}#">Home</a>
+            <a href="{% url 'blog' %}#">Blog</a>
+            <a href="{% url 'home' %}#">Sobre nós</a>
+          </div>
+
+          <div class="footer-card">
+            <span>Resources</span>
+            <a href="#">FAQ</a>
+            <a href="#">Políticas</a>
+          </div>
+
+          <div class="footer-card">
+            <span>Contatos</span>
+            <a
+              href="mailto:rafael.souorlan14@gmail.com">rafael.souorlan14@gmail.com</a>
+            <a href="tel:+5591982297971">(91) 98229-7971</a>
+            <a href="https://www.google.com/maps?q=Belém+do+Pará"
+              target="_blank">Belém do Pará</a>
+            <a href="https://www.instagram.com/decola_startup"
+              target="_blank">@decola_startup</a>
+          </div>
+        </div>
+
+        <div class="footer-culum3">
+          <p>&copy;2024 Decola Startup. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+
+      <script src="{% static 'menu.js' %}"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="{% static 'swiper.js' %}"></script>
+      <script src="{% static 'faq.js' %}"></script>
+      <script src="{% static 'btn-top.js' %}"></script>
     </body>
   </html>

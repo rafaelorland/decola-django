@@ -1,0 +1,476 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decola</title>
+
+    <!-- LINK FAVICON -->
+    <link rel="shortcut icon" href="{% static 'asserts/logo-one_decola.png' %}" type="image/x-icon" />
+
+    <!-- IMPORT FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@339&display=swap" rel="stylesheet" />
+
+    <!-- IMPORT ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- SASS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="{% static 'asserts/logo-one_decola.png' %}" alt="Logo Decola Startup" class="logo-menu" />
+
+      <div class="cart-menu">
+        <ul class="link-menu">
+          <li>
+            <a href="{% url 'home' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'home' %}#services">Serviços</a>
+          </li>
+          <li>
+            <a href="{% url 'blog' %}">Blog</a>
+          </li>
+          <li>
+            <a href="{% url 'home' %}#Contacts">Contatos</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="btn-menu">
+        <button><a href="{% url 'home' %}#Contacts">Contatos</a></button>
+      </div>
+
+      <!-- BOTÃO PARA MENU MOBILE -->
+      <div class="menu-mobile">
+        <button><i class="bi bi-list"></i></button>
+      </div>
+    </header>
+
+    <main>
+      <!-- SEÇÃO HOME -->
+      <section id="home" class="home">
+        <!-- INFOs -->
+        <div class="infos-home">
+          <h1>Decola</h1>
+
+          <p class="description">A solução Digital que faz seu negócio alcançar voos alto!</p>
+
+          <p class="description-text">Especialista em criar soluções digitais personalizadas para impulsionar o sucesso do seu negócio. Com nossa expertise em desenvolvimento de software, transformamos suas ideias em ferramentas eficientes e inovadoras que atendem às suas necessidades específicas, ajudando sua empresa a decolar e alcançar novos patamares.</p>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="image-home">
+          <img src="{% static 'asserts/hero.png' %}" alt class="image--descktop" />
+          <img src="{% static 'asserts/hero-mob.png' %}" alt class="image--responsive" />
+
+          <!-- ELLEMENT -->
+          <div class="shape"></div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE TECNOLOGIAS -->
+      <section class="carrossel">
+        <div class="conteiner-carrossel">
+          <div class="item-img-carrossel" style="--delay: 1s">
+            <img src="{% static 'asserts/carrossel/item1-1.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 2s">
+            <img src="{% static 'asserts/carrossel/item1-2.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 3s">
+            <img src="{% static 'asserts/carrossel/item1-3.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 4s">
+            <img src="{% static 'asserts/carrossel/item1-4.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 5s">
+            <img src="{% static 'asserts/carrossel/item1-5.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 6s">
+            <img src="{% static 'asserts/carrossel/item1-6.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 7s">
+            <img src="{% static 'asserts/carrossel/item1-7.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 8s">
+            <img src="{% static 'asserts/carrossel/item1-8.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 9s">
+            <img src="{% static 'asserts/carrossel/item1-9.png' %}" alt />
+          </div>
+          <div class="item-img-carrossel" style="--delay: 10s">
+            <img src="{% static 'asserts/carrossel/item1-10.png' %}" alt />
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE SERVIÇOS -->
+      <section id="services" class="services">
+        <div class="cards-planes">
+          <!-- COLUNA 1 -->
+          <div class="colum-one">
+            <!-- CARD 1 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/1.svg' %}" alt />
+              <h3 class="txt-o">Sites institucionais</h3>
+              <p>Com foco em soluções inovadoras e eficientes, o serviço abrange desde o design responsivo e funcional. Além de apresentarem a empresa, produtos e serviços de forma profissional.</p>
+              <ul>
+                <li>Personalização total</li>
+                <li>Escalabilidade garantida</li>
+                <li>Segurança robusta</li>
+              </ul>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/2.svg' %}" alt />
+              <h3 class="txt-t">Manutenção e Suporte de Software</h3>
+              <p>Este serviço é ideal para empresas que desejam garantir o bom desempenho de suas soluções digitais, minimizando riscos e evitando problemas inesperados.</p>
+              <ul>
+                <li>Monitoramento contínuo</li>
+                <li>Atualizações regulares</li>
+                <li>Suporte técnico especializado</li>
+              </ul>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/3.svg' %}" alt />
+              <h3 class="txt-o">Sistemas de gestão de conteúdo (CMS)</h3>
+              <p>Do conceito ao lançamento, o CMS cuida de todas as etapas, garantindo uma experiência intuitiva e acessível aos usuários finais. E facilitam a criação e gestão de conteúdo em sites e aplicações.</p>
+              <ul>
+                <li>Escalabilidade total</li>
+                <li>Modelo de negócio recorrente</li>
+                <li>Acesso facilitado</li>
+              </ul>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/4.svg' %}" alt />
+              <h3 class="txt-t">E - commerce</h3>
+              <p>Criação de plataformas de comércio eletrônico completas com integração de sistemas que permitem a venda de produtos e serviços pela internet.</p>
+              <ul>
+                <li>Personalização completa</li>
+                <li>Integração com sistemas de pagamento e gestão</li>
+                <li>SEO e marketing digital</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- COLUNA 2 -->
+          <div class="colum-two">
+            <!-- CARD 1 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/5.svg' %}" alt />
+              <h3 class="txt-t">Landing pages</h3>
+              <p>Com design moderno e foco estratégico em SEO e experiência do usuário, as landing pages são ideais que capturam leads e direcionam o tráfego para ações específicas.</p>
+              <ul>
+                <li>Foco em conversão</li>
+                <li>SEO otimizado</li>
+                <li>Design responsivo</li>
+              </ul>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/6.svg' %}" alt />
+              <h3 class="txt-o">Desenvolvimento de Apps</h3>
+              <p>Criação de apps nativos ou híbridos para Android e iOS, focados em oferecer experiências mobile robustas.</p>
+              <ul>
+                <li>Experiência do usuário otimizada</li>
+                <li>Multiplataforma</li>
+                <li>Tecnologia de ponta</li>
+              </ul>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/7.svg' %}" alt />
+              <h3 class="txt-t">Chatbots e Assistentes Virtuais</h3>
+              <p>Desenvolvimento de chatbots para automação de atendimento ao cliente, integração com redes sociais e websites.</p>
+              <ul>
+                <li>Atendimento 24/7</li>
+                <li>Automatização de processos</li>
+                <li>Personalização</li>
+              </ul>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="card">
+              <img src="{% static 'asserts/icons/8.svg' %}" alt />
+              <h3 class="txt-o">Criação de Software Sob Medida</h3>
+              <p>Soluções personalizadas para automação de processos internos, gestão de clientes (CRM), ou ERP de acordo com as necessidades de cada negócio.</p>
+              <ul>
+                <li>Integração facilitada</li>
+                <li>Escalabilidade</li>
+                <li>Personalização completa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-planes">
+          <h2>Nossos <span>Serviços</span></h2>
+          <p>Especialista em criar soluções digitais personalizadas para impulsionar o sucesso do seu negócio.</p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO MISSÃO -->
+      <section id="mission" class="mission">
+        <div class="info-mission">
+          <h2>Nós fazemos</h2>
+          <p>A Decola Startup é uma potência em inovação, desenvolvendo soluções de software sob medida para impulsionar o sucesso dos nossos clientes.</p>
+          <p>Nossa equipe é apaixonada por tecnologia e possui expertise em desenvolvimento mobile e web. Acreditamos no poder da inovação para transformar negócios. Seja você um microempreendedor ou uma grande corporação, contamos com a experiência necessária para criar soluções sob medida e que superem suas expectativas.</p>
+        </div>
+
+        <div class="cards-mission">
+          <!-- CARD 1 -->
+          <div class="card-mission">
+            <img src="{% static 'asserts/mission/1.png' %}" alt />
+            <h3>Plataformas <br /> Online</h3>
+            <p>Criamos plataformas digitais inovadoras com interfaces intuitivas e envolventes, que oferecem experiências excepcionais aos usuários e ajudam a destacar sua marca no ambiente digital.</p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="card-mission">
+            <img src="{% static 'asserts/mission/2.png' %}" alt />
+            <h3>Soluções <br /> Digitais</h3>
+            <p>Desenvolvemos sistemas web personalizados que otimizam processos internos e aumentam a eficiência operacional, ajudando a modernizar seu negócio.</p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="card-mission">
+            <img src="{% static 'asserts/mission/3.png' %}" alt />
+            <h3>Redes Sociais <br /> & Marketing</h3>
+            <p>Oferecemos soluções para gestão de redes sociais e estratégias de marketing digital que ajudam sua empresa a se destacar e a atrair mais clientes, ampliando a sua presença online.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="faq">
+        <h2>Perguntas Frequêntes</h2>
+
+        <!-- 1 -->
+        <div class="accordion-conteiner">
+          <div class="accordion">
+            <!-- HEADER -->
+            <button class="accordion-header">
+              <span>O que é software?</span>
+              <i class="bi bi-chevron-down arrow"></i>
+            </button>
+
+            <!-- BODY -->
+            <div class="accordion-body">
+              <p>Tudo o que você faz em um computador, smartphone ou tablet envolve a utilização de algum tipo de software. São exemplos muito comum do nosso dia a dia, Word, Excel, Facebook, WhatsApp, entre outros.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="accordion-conteiner">
+          <div class="accordion">
+            <!-- HEADER -->
+            <button class="accordion-header">
+              <span>Por que ter um software no seu negócio?</span>
+              <i class="bi bi-chevron-down arrow"></i>
+            </button>
+
+            <!-- BODY -->
+            <div class="accordion-body">
+              <p>Um software, seja ele simples ou complexo, pode ser um grande aliado para o crescimento e sucesso de qualquer negócio, independentemente do seu tamanho. Ele oferece diversas vantagens que podem otimizar processos, aumentar a produtividade e melhorar a tomada de decisões.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="accordion-conteiner">
+          <div class="accordion">
+            <!-- HEADER -->
+            <button class="accordion-header">
+              <span>Qual a diferença entre um site institucional e uma landing page?</span>
+              <i class="bi bi-chevron-down arrow"></i>
+            </button>
+
+            <!-- BODY -->
+            <div class="accordion-body">
+              <p>Um site institucional é como um cartão de visitas online, apresentando a empresa, seus produtos e serviços de forma completa. Já uma landing page é uma página focada em uma única ação, como um formulário de contato ou uma compra, e é geralmente criada para campanhas específicas. A escolha entre um ou outro depende do objetivo da sua campanha de marketing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="accordion-conteiner">
+          <div class="accordion">
+            <!-- HEADER -->
+            <button class="accordion-header">
+              <span>O que é um CMS e por que ele é importante para o meu negócio?</span>
+              <i class="bi bi-chevron-down arrow"></i>
+            </button>
+
+            <!-- BODY -->
+            <div class="accordion-body">
+              <p>CMS significa Sistema de Gestão de Conteúdo. Ele permite que você mesmo edite e atualize o conteúdo do seu site, sem precisar de conhecimentos técnicos. Isso facilita a manutenção do seu site e garante que ele esteja sempre atualizado. Com um CMS, você pode adicionar novas páginas, blog posts e outros conteúdos de forma rápida e fácil.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="accordion-conteiner">
+          <div class="accordion">
+            <!-- HEADER -->
+            <button class="accordion-header">
+              <span>Quais são as vantagens de ter um aplicativo mobile para o meu negócio?</span>
+              <i class="bi bi-chevron-down arrow"></i>
+            </button>
+
+            <!-- BODY -->
+            <div class="accordion-body">
+              <p>Um aplicativo mobile oferece diversas vantagens, como maior visibilidade da sua marca, maior engajamento com os clientes e a possibilidade de oferecer serviços personalizados. Além disso, um aplicativo permite que seus clientes acessem seus produtos e serviços a qualquer hora e em qualquer lugar, facilitando a compra e a interação com a sua empresa.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="accordion-conteiner">
+          <div class="accordion">
+            <!-- HEADER -->
+            <button class="accordion-header">
+              <span>Qual é o prazo de entrega para o desenvolvimento de um site?</span>
+              <i class="bi bi-chevron-down arrow"></i>
+            </button>
+
+            <!-- BODY -->
+            <div class="accordion-body">
+              <p>O prazo de entrega de um software é estimado após uma análise detalhada das suas necessidades. Fatores como o tamanho do projeto, a quantidade de funcionalidades, a complexidade das integrações e a disponibilidade de recursos internos e externos influenciam diretamente o tempo de desenvolvimento.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="accordion-conteiner">
+          <div class="accordion">
+            <!-- HEADER -->
+            <button class="accordion-header">
+              <span>Quais são as vantagens de ter um aplicativo mobile para o meu negócio?</span>
+              <i class="bi bi-chevron-down arrow"></i>
+            </button>
+
+            <!-- BODY -->
+            <div class="accordion-body">
+              <p>Um aplicativo mobile oferece diversas vantagens, como maior visibilidade da sua marca, maior engajamento com os clientes e a possibilidade de oferecer serviços personalizados. Além disso, um aplicativo permite que seus clientes acessem seus produtos e serviços a qualquer hora e em qualquer lugar, facilitando a compra e a interação com a sua empresa.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO CONTACT -->
+      <section id="Contacts" class="Contacts">
+        <h2>Transformando ideias em <br /> realidades incríveis, juntos!</h2>
+
+        <p>
+          A <strong>Decola Startup</strong> tem o compromisso de transformar as ideias dos nossos clientes em produtos digitais de sucesso, unindo inovação, agilidade e expertise em cada projeto.
+        </p>
+
+        <div class="content-contact">
+          <button>
+            <i class="bi bi-whatsapp"></i>
+            <a href="tel:+5591982297971"><p>Entre em contato</p></a>
+          </button>
+
+          <div class="contact-social">
+            <p>Siga-nos</p>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- Botão Flutuante -->
+      <button id="btnTop" title="Ir ao topo"><img src="{% static 'asserts/buttons/chevron-up.svg' %}" alt /></button>
+    </main>
+
+    <footer>
+      <div class="footer-culum1">
+        <img src="{% static 'asserts/logo-decola-three.png' %}" alt="Logo Decola Startup" />
+
+        <div>
+          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-whatsapp"></i>
+          <i class="bi bi-github"></i>
+        </div>
+      </div>
+
+      <div class="footer-culum2">
+        <div class="footer-card">
+          <span>Links rápidos</span>
+          <a href="{% url 'home' %}#">Home</a>
+          <a href="{% url 'blog' %}#">Blog</a>
+          <a href="{% url 'home' %}">Sobre nós</a>
+        </div>
+
+        <div class="footer-card">
+          <span>Resources</span>
+          <a href="#">FAQa</a>
+          <a href="#">Politicas</a>
+        </div>
+
+        <div class="footer-card">
+          <span>Contatos</span>
+          <a href="mailto:rafael.souorlan14@gmail.com">rafael.souorlan14@gmail.com</a>
+          <a href="tel:+5591982297971">(91) 98229-7971</a>
+          <a href="https://www.google.com/maps?q=Belém+do+Pará" target="_blank">Belém do Pará</a>
+          <a href="https://www.instagram.com/decola_startup" target="_blank">@decola_startup</a>
+        </div>
+
+        <div class="footer-form">
+          <span>Envie sua dúvida</span>
+
+          <form action="#" method="post">
+            <fieldset class="card-form">
+              <legend>Formulário de Contato</legend>
+
+              <label for="email">Email</label>
+
+              <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" required />
+              <label for="email">Dúvida</label>
+
+              <input type="text" name="text" id="text" required />
+
+              <div class="politic">
+                <input type="checkbox" name="politic" id="politic" required />
+
+                <label for="politic">Li e aceito os <a href="#">termos de política de privacidade</a></label>
+              </div>
+
+              <button type="submit">Enviar</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-culum3">
+        <p>&copy;2024 Decola Startup. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="{% static 'menu.js' %}"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'swiper.js' %}"></script>
+    <script src="{% static 'faq.js' %}"></script>
+    <script src="{% static 'btn-top.js' %}"></script>
+  </body>
+</html>

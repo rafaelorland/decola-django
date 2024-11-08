@@ -1,0 +1,18 @@
+/* Estilos para o botão flutuante */
+#btnTop {
+    display: none;
+    position: fixed;
+    bottom: 95px;
+    right: -3px;
+    z-index: 99;
+    background-color: #999999;
+    border: none;
+    border-radius: 15px 0px 0px 15px;
+    padding: 13px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+#btnTop:hover {
+    box-shadow: 0px 0px 12px $primary-color-one;
+}
